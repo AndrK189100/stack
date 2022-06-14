@@ -12,7 +12,7 @@ fixture = [
 
 def is_balanced_brackets(brackets: str) -> str:
 
-    if len(brackets) % 2 != 0 or len(brackets) < 2:
+    if len(brackets) % 2 != 0 or len(brackets) < 2 or brackets[0] not in ('(', '{', '['):
         return 'Несбалансированно'
 
     stack = Stack()
